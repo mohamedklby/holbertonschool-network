@@ -1,4 +1,9 @@
 #!/bin/bash
 
-# Affiche uniquement les sockets à l'écoute avec PID/nom du programme
-sudo ss -tulpen
+# Vérifie si SSH tourne
+sudo systemctl status ssh
+
+# Vérifie si Apache (HTTP) ou nginx tourne
+sudo systemctl status apache2
+sudo systemctl status nginx
+
