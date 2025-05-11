@@ -1,9 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Displays listening ports. Includes listening sockets
+# + as the PID and name of the program to which each socket belongs.
 
-# Vérifie si SSH tourne
-sudo systemctl status ssh
-
-# Vérifie si Apache (HTTP) ou nginx tourne
-sudo systemctl status apache2
-sudo systemctl status nginx
-
+netstat - l - -program
